@@ -38,7 +38,7 @@ import android.widget.TextView;
  *
  */
 public class SelectFile extends Activity {
-	ListView list_files; // ������������ ������ ������ ��
+	ListView list_files; 
 
 	ArrayList<String> last_files;
 	
