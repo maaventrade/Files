@@ -126,6 +126,10 @@ public class SelectFile extends Activity {
         //ab.setTitle("");
 		ab.setHomeButtonEnabled(false);
 		
+	    TextView textViewCurrentDir;
+        textViewCurrentDir = (TextView)findViewById(R.id.textViewCurrentDir);
+        textViewCurrentDir.setVisibility(View.INVISIBLE);
+		
 		// Set color of the ActionBar
 		int titleId = getResources().getIdentifier("action_bar_subtitle", "id", "android");
 		TextView abTitle = (TextView) findViewById(titleId);
@@ -138,7 +142,7 @@ public class SelectFile extends Activity {
         
         Intent myIntent = getIntent(); 
         
-        // � ������ �������� - ����� ����� �� �������� ������� 
+        // 
         list_files=(ListView)findViewById(R.id.FileList);
         String initPath = myIntent.getStringExtra("initPath"); 
         fileExt = myIntent.getStringArrayExtra("fileExt");

@@ -129,6 +129,7 @@ public class SelectFileDialog extends Dialog {
             		if (files[i].getName().endsWith(fileExt[j])){
             			addFile = true;
             			break;
+            			
             		}
             	if (addFile) listFiles.add(files[i]);
         	}	
@@ -158,6 +159,7 @@ public class SelectFileDialog extends Dialog {
         list_files = (ListView)findViewById(R.id.FileList);
         textViewCurrentDir = (TextView)findViewById(R.id.textViewCurrentDir);
         textViewCurrentDir.setText(initPath);
+        textViewCurrentDir.setVisibility(View.INVISIBLE);
         
         if (!editName){
         	LinearLayout linearLayoutNew = (LinearLayout)findViewById(R.id.LinearLayoutNew);
